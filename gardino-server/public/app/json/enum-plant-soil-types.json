@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Voedingsrijk (humus)",
+    "code": "voedingsrijk"
+  },
+  {
+    "name": "Normaal",
+    "code": "normaal"
+  },
+  {
+    "name": "Klei",
+    "code": "klei"
+  },
+  {
+    "name": "Zand",
+    "code": "zand"
+  },
+  {
+    "name": "Arm",
+    "code": "arm"
+  },
+  {
+    "name": "Rots",
+    "code": "rots"
+  },
+  {
+    "name": "Waterplant",
+    "code": "water"
+  }
+]

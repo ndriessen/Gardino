@@ -1,0 +1,12 @@
+<md-content layout="row" layout-wrap>
+    <md-content style="width:325px;height:325px;">
+        <gardino-image-upload image-upload-model="newPlantImage" on-upload="onUpload(url)"
+                              preview-image="false"></gardino-image-upload>
+    </md-content>
+
+    <md-content ng-repeat="image in plant.images" class="image-preview-tile"
+                style="width:300px; height:300px; margin:8px;">
+        <img ng-src="{{image}}"/>
+    </md-content>
+
+</md-content>

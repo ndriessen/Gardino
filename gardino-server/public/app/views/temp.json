@@ -1,0 +1,99 @@
+{
+  "maintenance": {
+    "pruning": {
+      "needed": true,
+      "period": {
+        "0": {
+          "start": "3",
+          "end": "4"
+        }
+      },
+      "instructions": "snoeien instructies maart tot mei"
+    },
+    "fertilize": {
+      "needed": true,
+      "period": {
+        "0": {
+          "start": "4",
+          "end": "5"
+        },
+        "1": {
+          "start": "8"
+        }
+      },
+      "instructions": "bemesten apr - mei en in augustus (tot = leeg)"
+    },
+    "chalk": {
+      "needed": true,
+      "period": {
+        "0": {
+          "start": "2",
+          "end": "4"
+        },
+        "1": {
+          "start": "5",
+          "end": "6"
+        }
+      },
+      "instructions": "kalk geven feb-apr en mei-juni"
+    }
+  },
+  "image_url": "/data/images/68fc04dccb9dc58dc9e4d3bcb13d5602.jpg",
+  "name": "Full Data Test",
+  "alt_name": "Volksnaam",
+  "type": "bol",
+  "description": "Omschrijving plant: bolgewas",
+  "attributes": {
+    "height": 100,
+    "width": 50,
+    "planting_density": 1,
+    "evergreen": true,
+    "winter_hardy": true,
+    "method_multiply": [
+      "afleggen",
+      "stekken"
+    ],
+    "period_sow": {
+      "start": "1",
+      "end": "3"
+    },
+    "period_plant": {
+      "start": "3",
+      "end": "4"
+    },
+    "period_harvest": {
+      "start": "8",
+      "end": "9"
+    }
+  },
+  "flower": {
+    "has_flower": true,
+    "color": "Kleur bloem",
+    "description": "Omschrijving bloem",
+    "edible": true,
+    "vagrant": true,
+    "period": {
+      "start": "4",
+      "end": "5"
+    }
+  },
+  "fruit": {
+    "edible": true,
+    "has_fruit": true,
+    "color": "kleur vrucht",
+    "type": "type: bes",
+    "description": "omschrijving vruchten: bes",
+    "period": {
+      "start": "7",
+      "end": "10"
+    }
+  },
+  "location": {
+    "habitat": "bosrand",
+    "comments": "bosrand"
+  },
+  "images": [
+    "/data/images/8be3ac2868bbc9a42b868fc45d60f4d2.jpg",
+    "/data/images/f2bac525059706ae00728b26b0b2e3a0.jpg"
+  ]
+}

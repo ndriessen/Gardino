@@ -1,0 +1,59 @@
+<md-dialog aria-label="Plant Details" flex style="max-width:800px;max-height:810px;">
+    <md-content layout="column" flex ng-cloak>
+        <form name="form" novalidate enctype='multipart/form-data'>
+            <input type="hidden" ng-model="plant._id">
+            <md-dialog-content>
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="Algemeen" class="md-primary">
+                        <md-content flex>
+                            <ng-include src="'views/partial/plant-tab-general.html'"></ng-include>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Details">
+                        <md-content flex>
+                            <ng-include src="'views/partial/plant-tab-detail.html'"></ng-include>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Bloem en vrucht">
+                        <md-content flex>
+                            <ng-include src="'views/partial/plant-tab-flower-fruit.html'"></ng-include>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Locatie">
+                        <md-content layout-padding>
+                            <ng-include src="'views/partial/plant-tab-location.html'"></ng-include>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Onderhoud">
+                        <md-content layout-padding>
+                            <ng-include src="'views/partial/plant-tab-maintenance.html'"></ng-include>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="Afbeeldingen">
+                        <md-content layout-padding>
+                            <ng-include src="'views/partial/plant-tab-images.html'"></ng-include>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-dialog-content>
+            <md-dialog-actions layout="row">
+                <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
+                    More info
+                </md-button>
+                <span flex></span>
+                <md-button class="md-primary" ng-click="save()">
+                    <md-icon md-font-icon="content-save" aria-label="content-save"></md-icon>
+                    Opslaan
+                </md-button>
+                <md-button ng-click="cancel()" style="margin-right:20px;">
+                    Annuleer
+                </md-button>
+            </md-dialog-actions>
+        </form>
+    </md-content>
+</md-dialog>
+
+
+
+
+

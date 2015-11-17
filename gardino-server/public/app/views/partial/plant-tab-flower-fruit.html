@@ -1,0 +1,58 @@
+<md-content layout-gt-md="row" layout-padding>
+    <md-content layout="column" flex>
+        <md-input-container>
+            <md-checkbox class="md-primary" ng-model="plant.flower.has_flower"
+                         aria-label="Bloem?">
+                Bloem?
+            </md-checkbox>
+        </md-input-container>
+        <div layout-padding>
+            <md-input-container>
+                <label>Bloemkleur</label>
+                <input type="text" ng-model="plant.flower.color">
+            </md-input-container>
+            <md-input-container>
+                <label>Omshrijving</label>
+                <input type="text" ng-model="plant.flower.description">
+            </md-input-container>
+            <md-checkbox class="md-primary" ng-model="plant.flower.edible"
+                         aria-label="Eetbaar?">
+                Eetbaar?
+            </md-checkbox>
+            <md-checkbox class="md-primary" ng-model="plant.flower.vagrant"
+                         aria-label="Geurend?">
+                Geurend?
+            </md-checkbox>
+            <gardino-period-select period-select-label="Bloeiperiode"
+                                   period-select-model="plant.flower.period"></gardino-period-select>
+        </div>
+    </md-content>
+    <md-content layout="column" flex>
+        <md-input-container>
+            <md-checkbox class="md-primary" ng-model="plant.fruit.has_fruit"
+                         aria-label="Vrucht?">
+                Vruchten?
+            </md-checkbox>
+        </md-input-container>
+        <div layout-padding>
+            <md-input-container>
+                <label>Kleur</label>
+                <input type="text" ng-model="plant.fruit.color">
+            </md-input-container>
+            <md-input-container>
+                <label>Type</label>
+                <input type="text" ng-model="plant.fruit.type">
+            </md-input-container>
+            <md-input-container>
+                <label>Omshrijving</label>
+                <input type="text" ng-model="plant.fruit.description">
+            </md-input-container>
+            <md-checkbox class="md-primary" ng-model="plant.fruit.edible"
+                         aria-label="Eetbaar?">
+                Eetbaar?
+            </md-checkbox>
+            <gardino-period-select period-select-label="Periode"
+                                   period-select-model="plant.fruit.period"></gardino-period-select>
+        </div>
+    </md-content>
+</md-content>

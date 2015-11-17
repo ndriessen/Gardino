@@ -1,0 +1,29 @@
+<md-content layout-gt-md="row">
+    <gardino-image-upload image-upload-model="plant.image_url"></gardino-image-upload>
+    <md-content layout-padding flex>
+        <md-input-container flex>
+            <label for="plantName">Latijnse naam</label>
+            <input type="text" ng-model="plant.name" id="plantName" name="plantName"
+                   required="">
+        </md-input-container>
+        <md-input-container flex>
+            <label>Volksnaam</label>
+            <input type="text" ng-model="plant.alt_name" name="plantAltName">
+        </md-input-container>
+        <md-input-container flex>
+            <label>Type plant</label>
+            <md-select ng-model="plant.type" name="plantType">
+                <md-option ng-repeat="plantType in plantTypes | orderBy: 'name'"
+                           value="{{plantType.code}}">
+                    {{plantType.name}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+    </md-content>
+</md-content>
+<md-content layout-padding flex>
+    <md-input-container class="md-block">
+        <label>Korte omschrijving van de plant</label>
+        <textarea ng-model="plant.description" md-maxlength="250" rows="4"></textarea>
+    </md-input-container>
+</md-content>

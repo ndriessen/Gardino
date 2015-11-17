@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Border/Rand",
+    "code": "border"
+  },
+  {
+    "name": "Bosrand",
+    "code": "bosrand"
+  },
+  {
+    "name": "Bos",
+    "code": "bos"
+  },
+  {
+    "name": "Weide",
+    "code": "weide"
+  },
+  {
+    "name": "Heide",
+    "code": "heide"
+  },
+  {
+    "name": "Duinen",
+    "code": "duinen"
+  },
+  {
+    "name": "Berggebied",
+    "code": "bergebied"
+  }
+]

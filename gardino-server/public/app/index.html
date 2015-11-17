@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gardino</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--link href="assets/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" /-->
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="assets/css/base.css"/>
+    <link rel="stylesheet" href="assets/css/app.css"/>
+
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+
+</head>
+
+<body ng-app="gardino" layout="row" ng-controller="AppController" ng-cloak>
+
+<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+            md-component-id="left"
+            md-is-locked-open="$mdMedia('gt-sm')">
+
+    <md-toolbar class="md-whiteframe-z1">
+        <h1>Gardino</h1>
+    </md-toolbar>
+
+    <md-list>
+        <md-list-item>
+            <md-button class="md-raised" aria-label="Planten" href="#/plants">Planten</md-button>
+        </md-list-item>
+        <md-list-item>
+            <md-button class="md-raised" aria-label="Laad Data" ng-click="loadSampleData()">Laad Sample Data</md-button>
+        </md-list-item>
+    </md-list>
+</md-sidenav>
+
+
+<div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+
+    <md-toolbar layout="row" class="md-whiteframe-z1">
+        <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
+            <md-icon md-svg-icon="menu"></md-icon>
+        </md-button>
+        <h1>Gardino</h1>
+    </md-toolbar>
+
+    <md-content flex id="content" layout-padding="none" ng-view>
+
+    </md-content>
+
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-translate/angular-translate.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+
+<script src="bower_components/ng-file-upload/ng-file-upload-shim.js"></script>
+<script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+<script src="assets/js/checklist-model.js"></script>
+
+<script src="js/gardino-directives.js"></script>
+<script src="js/gardino-filters.js"></script>
+<script src="js/gardino-enums.js"></script>
+<script src="js/gardino-plants.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

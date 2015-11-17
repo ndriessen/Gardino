@@ -1,0 +1,62 @@
+<md-content flex>
+    <md-content flex layout-gt-sm="row">
+        <md-content layout-padding>
+            <md-input-container>
+                <md-checkbox class="md-primary" ng-model="plant.maintenance.pruning.needed"
+                             aria-label="Snoeien?">Snoeien?
+                </md-checkbox>
+
+            </md-input-container>
+        </md-content>
+        <md-content flex>
+            <gardino-period-select period-select-label="Periode"
+                                   period-select-model="plant.maintenance.pruning.period[0]"></gardino-period-select>
+            <gardino-period-select period-select-label="Periode"
+                                   period-select-model="plant.maintenance.pruning.period[1]"></gardino-period-select>
+            <md-input-container>
+                <label>Instructies</label>
+                <textarea ng-model="plant.maintenance.pruning.instructions" md-maxlength="250" rows="1"></textarea>
+            </md-input-container>
+        </md-content>
+    </md-content>
+    <md-content flex layout-gt-sm="row">
+        <md-content layout-padding>
+            <md-input-container>
+                <md-checkbox class="md-primary" ng-model="plant.maintenance.fertilize.needed"
+                             aria-label="Bemesten?">Bemesten?
+                </md-checkbox>
+
+            </md-input-container>
+        </md-content>
+        <md-content flex>
+            <gardino-period-select period-select-label="Periode"
+                                   period-select-model="plant.maintenance.fertilize.period[0]"></gardino-period-select>
+            <gardino-period-select period-select-label="Periode"
+                                   period-select-model="plant.maintenance.fertilize.period[1]"></gardino-period-select>
+            <md-input-container>
+                <label>Instructies</label>
+                <textarea ng-model="plant.maintenance.fertilize.instructions" md-maxlength="250" rows="1"></textarea>
+            </md-input-container>
+        </md-content>
+    </md-content>
+    <md-content flex layout-gt-sm="row">
+        <md-content layout-padding>
+            <md-input-container>
+                <md-checkbox class="md-primary" ng-model="plant.maintenance.chalk.needed"
+                             aria-label="Kalk geven?">Kalk geven?
+                </md-checkbox>
+
+            </md-input-container>
+        </md-content>
+        <md-content flex>
+            <gardino-period-select period-select-label="Periode"
+                                   period-select-model="plant.maintenance.chalk.period[0]"></gardino-period-select>
+            <gardino-period-select period-select-label="Periode"
+                                   period-select-model="plant.maintenance.chalk.period[1]"></gardino-period-select>
+            <md-input-container>
+                <label>Instructies</label>
+                <textarea ng-model="plant.maintenance.chalk.instructions" md-maxlength="250" rows="1"></textarea>
+            </md-input-container>
+        </md-content>
+    </md-content>
+</md-content>

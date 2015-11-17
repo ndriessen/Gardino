@@ -1,0 +1,14 @@
+<md-content layout-padding>
+    <input type="hidden" ng-model="imageModel">
+
+    <div class="drop-box" ngf-drop="upload($file)" ngf-drag-over-class="'dragover'"
+         ngf-pattern="'image/*'" ngf-max-size="3MB">
+        <span ng-show="!previewUrl" class="md-caption"><em>{{emptyText}}</em></span>
+        <img ng-src="{{previewUrl}}" ng-show="previewUrl">
+
+        <div class="md-caption image-upload-note"><em>{{infoText}}</em></div>
+    </div>
+    <div ngf-no-file-drop>
+        <div class="button" ngf-select="upload($file)">Upload afbeelding(en)</div>
+    </div>
+</md-content>

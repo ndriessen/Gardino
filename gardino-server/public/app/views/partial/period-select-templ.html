@@ -1,0 +1,25 @@
+<md-content layout="row">
+    <md-content flex="33" layout-align="center end">
+        <md-input-container>
+            <span class="period-select-label">{{periodLabel}}</span>
+        </md-input-container>
+    </md-content>
+    <md-content flex="66" layout="row">
+        <md-input-container>
+            <label>Van</label>
+            <md-select class="period-select" ng-model="periodModel.start">
+                <md-option ng-repeat="month in months" value="{{month.code}}">
+                    {{month.name}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container>
+            <label>tot</label>
+            <md-select class="period-select" ng-model="periodModel.end">
+                <md-option ng-repeat="month in months" value="{{month.code}}">
+                    {{month.name}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+    </md-content>
+</md-content>

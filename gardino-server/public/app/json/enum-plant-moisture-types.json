@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Vochtig/Nat",
+    "code": "vocht"
+  },
+  {
+    "name": "Vochthoudend",
+    "code": "vochthoudend"
+  },
+  {
+    "name": "Normaal",
+    "code": "normaal"
+  },
+  {
+    "name": "Droog",
+    "code": "droog"
+  },
+  {
+    "name": "Water(rand)/Moeras",
+    "code": "water"
+  }
+]

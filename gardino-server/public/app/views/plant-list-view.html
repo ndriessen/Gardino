@@ -1,0 +1,29 @@
+<md-content layout="row" layout-align="start center">
+    <md-button class="md-raised" aria-label="Add Plant" ng-click="addPlant()">
+        Add Plant
+    </md-button>
+    <md-input-container>
+        <label>Search</label>
+        <input type="text" ng-model="q">
+    </md-input-container>
+</md-content>
+<md-content flex>
+    <md-content ng-repeat="plant in plants | filter:q track by $index "
+                style="width: 350px; height: 575px; float: left; overflow:hidden">
+        <div>
+            <md-card>
+                <h2 style="z-index: 2;padding-left: 15px;">{{plant.name}}</h2>
+                <img ng-src="{{plant.image_url}}" class="md-card-image" alt="Image for {{plant.name}}">
+                <md-card-content>
+                    <h4 class="md-title">{{plant.alt_name}}</h4>
+
+                    <p style="min-height: 75px;">{{plant.description | summarize:150 }}</p>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button ng-click="editPlant($index)">Edit</md-button>
+                    <md-button ng-click="deletePlant($index)">Delete</md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </md-content>
+</md-content>

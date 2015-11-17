@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Gardino</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>Gardino</h1>
+
+<ng-view></ng-view>
+
+<!-- Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.min.js"></script>
+
+<!-- Template -->
+<script type="text/ng-template" id="/plants.html">
+    Search: <input type="text" ng-model="search.name">
+    <ul>
+        <li ng-repeat="plant in plants | filter: search">
+            <a href="#/{{$plant.id}}">{{plant.name}}</a>
+        </li>
+    </ul>
+</script>
+
+<script type="text/ng-template" id="/plantDetails.html">
+    <h1>{{ plant.name }}</h1>
+    completed: <input type="checkbox" ng-model="todo.completed">
+    note: <textarea>{{ todo.description }}</textarea>
+</script>
+
+<script>
+    angular.module('app', ['ngRoute', 'ngResource'])
+
+        //---------------
+        // Services
+        //---------------
+
+            .factory('Plants', ['$resource', function ($resource) {
+                return $resource('/plants/:id', null, {
+                    'update': {method: 'PUT'}
+                });
+            }])
+
+        //---------------
+        // Controllers
+        //---------------
+
+            .controller('PlantController', ['$scope', 'Plants', function ($scope, Plants) {
+                $scope.plants = Plants.query();
+            }])
+
+            .controller('PlantDetailCtrl', ['$scope', '$routeParams', 'Plants', function ($scope, $routeParams, Plants) {
+                $scope.plant = Plants[$routeParams.id];
+            }])
+
+        //---------------
+        // Routes
+        //---------------
+
+            .config(['$routeProvider', function ($routeProvider) {
+                $routeProvider
+                        .when('/', {
+                            templateUrl: '/plants.html',
+                            controller: 'PlantController'
+                        })
+
+                        .when('/:id', {
+                            templateUrl: '/plantDetails.html',
+                            controller: 'PlantDetailCtrl'
+                        });
+            }]);
+</script>
+</body>
+</html>

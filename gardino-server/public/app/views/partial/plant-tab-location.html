@@ -1,0 +1,70 @@
+<!-- location: {
+        soil_types: [String],
+        lighting_types: [String],
+        moisture_types: [String],
+        acidity_types: [String],
+        pH: {min: Number, max:Number},
+        habitat: String,
+        comments: String
+    },-->
+<md-content flex>
+    <md-input-container flex>
+        <label>Habitat</label>
+        <md-select ng-model="plant.location.habitat">
+            <md-option ng-repeat="item in plantHabitatTypes"
+                       value="{{item.code}}">
+                {{item.name}}
+            </md-option>
+        </md-select>
+    </md-input-container>
+    <md-input-container class="md-block">
+        <label>Opmerkingen</label>
+        <textarea ng-model="plant.location.comments" md-maxlength="250" rows="3"></textarea>
+    </md-input-container>
+</md-content>
+<md-content layout-gt-md="row" flex>
+    <div flex-gt-md="50" layout-padding>
+        <md-content>
+            <md-list>
+                <md-subheader class="md-no-sticky">Bodem</md-subheader>
+                <md-list-item ng-repeat="item in plantSoilTypes">
+                    <p> {{ item.name }} </p>
+                    <md-checkbox class="md-primary" checklist-model="plant.location.soil_types"
+                                 checklist-value="item.code">
+                </md-list-item>
+            </md-list>
+        </md-content>
+        <md-content>
+            <md-list>
+                <md-subheader class="md-no-sticky">Zuurte</md-subheader>
+                <md-list-item ng-repeat="item in plantAccidityTypes">
+                    <p> {{ item.name }} </p>
+                    <md-checkbox class="md-primary" checklist-model="plant.location.acidity_types"
+                                 checklist-value="item.code">
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+    <div flex-gt-md="50" layout-padding>
+        <md-content>
+            <md-list>
+                <md-subheader class="md-no-sticky">Licht</md-subheader>
+                <md-list-item ng-repeat="item in plantLightingTypes">
+                    <p> {{ item.name }} </p>
+                    <md-checkbox class="md-primary" checklist-model="plant.location.lighting_types"
+                                 checklist-value="item.code">
+                </md-list-item>
+            </md-list>
+        </md-content>
+        <md-content>
+            <md-list>
+                <md-subheader class="md-no-sticky">Vochtigheid</md-subheader>
+                <md-list-item ng-repeat="item in plantMoistureTypes">
+                    <p> {{ item.name }} </p>
+                    <md-checkbox class="md-primary" checklist-model="plant.location.moisture_types"
+                                 checklist-value="item.code">
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+</md-content>

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Volle Zon",
+    "code": "zon"
+  },
+  {
+    "name": "Half Zon",
+    "code": "half-zon"
+  },
+  {
+    "name": "Half Shaduw",
+    "code": "half-shaduw"
+  },
+  {
+    "name": "Shaduw",
+    "code": "shaduw"
+  }
+]

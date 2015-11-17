@@ -1,0 +1,9 @@
+<md-content>
+    <md-list>
+        <md-subheader class="md-no-sticky">{{multiSelectLabel}}</md-subheader>
+        <md-list-item ng-repeat="item in multiSelectItems">
+            <p> {{ item.name }} </p>
+            <md-checkbox class="md-primary" checklist-model="multiSelectModel" checklist-value="item.code">
+        </md-list-item>
+    </md-list>
+</md-content>

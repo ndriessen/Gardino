@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Heester",
+    "code": "heester"
+  },
+  {
+    "name": "Vaste Plant",
+    "code": "vasteplant"
+  },
+  {
+    "name": "Eénjarigen",
+    "code": "eenjarigen"
+  },
+  {
+    "name": "Tweejarigen",
+    "code": "tweejarigen"
+  },
+  {
+    "name": "Boom",
+    "code": "boom"
+  },
+  {
+    "name": "Klimplant",
+    "code": "klimplant"
+  },
+  {
+    "name": "Bolgewas",
+    "code": "bol"
+  }
+]

@@ -1,0 +1,47 @@
+<md-content layout-gt-md="row" flex>
+    <div flex-gt-md="50" layout-padding>
+        <md-input-container>
+            <label>Hoogte (in cm)</label>
+            <input type="number" step="10" ng-model="plant.attributes.height">
+        </md-input-container>
+        <md-input-container>
+            <label>Breedte (in cm)</label>
+            <input type="number" step="10" ng-model="plant.attributes.width">
+        </md-input-container>
+        <md-input-container>
+            <label>Plant dichtheid (planten/m²)</label>
+            <input type="number" ng-model="plant.attributes.planting_density">
+        </md-input-container>
+        <md-input-container>
+            <md-checkbox class="md-primary" ng-model="plant.attributes.evergreen" aria-label="Groenblijvend?">
+                Groenblijvend?
+            </md-checkbox>
+        </md-input-container>
+        <md-input-container>
+            <md-checkbox class="md-primary" ng-model="plant.attributes.winter_hardy" aria-label="Winterhard?">
+                Winterhard?
+            </md-checkbox>
+        </md-input-container>
+
+    </div>
+    <div flex-gt-md="50" layout-padding>
+        <md-content>
+            <md-list>
+                <md-subheader class="md-no-sticky">Vermeerderen</md-subheader>
+                <md-list-item ng-repeat="multiplyType in plantMultiplyTypes | orderBy: 'name'">
+                    <p> {{ multiplyType.name }} </p>
+                    <md-checkbox class="md-primary"
+                                 checklist-model="plant.attributes.method_multiply"
+                                 checklist-value="multiplyType.code">
+                </md-list-item>
+            </md-list>
+        </md-content>
+        <span>Van {{plant.attributes.period_sow.start}} tot {{plant.attributes.period_sow.end}}</span>
+        <gardino-period-select period-select-label="Zaai periode"
+                               period-select-model="plant.attributes.period_sow"></gardino-period-select>
+        <gardino-period-select period-select-label="Plant periode"
+                               period-select-model="plant.attributes.period_plant"></gardino-period-select>
+        <gardino-period-select period-select-label="Oogst periode"
+                               period-select-model="plant.attributes.period_harvest"></gardino-period-select>
+    </div>
+</md-content>

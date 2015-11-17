@@ -1,0 +1,118 @@
+.plant-tile {
+    background-color: #00A000 !important;
+}
+
+md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item.md-active:not([disabled]) {
+    color: #00A000;
+!important;
+}
+
+md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
+    color: #aeaeae;
+!important;
+}
+
+.md-input-container, md-input-container {
+    padding-bottom: 2px;
+}
+
+.md-list, md-list {
+    background-color: rgb(243, 243, 243);
+    background-clip: content-box;
+    border-radius: 15px;
+}
+
+.image-preview-tile {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #aeaeae;
+    overflow: hidden;
+    background: transparent;
+}
+
+.image-preview-tile img {
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 125%;
+    width: 300px;
+    height: 300px;
+}
+
+gardino-image-upload,
+.gardino-image-upload {
+
+}
+
+gardino-image-upload .drop-box,
+.gardino-image-upload .drop-box {
+    width: 300px;
+    height: 300px;
+    border: 3px dashed #aeaeae;
+    vertical-align: middle;
+    text-align: center;
+    background: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+gardino-image-upload .drop-box img,
+.gardino-image-upload .drop-box img {
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 125%;
+    width: 300px;
+    height: 300px;
+}
+
+gardino-image-upload.drop-box span,
+.gardino-image-upload.drop-box span {
+    padding-top: 285px;
+    text-align: center;
+    vertical-align: middle;
+    color: #aeaeae;
+}
+
+gardino-image-upload .image-upload-note,
+.gardino-image-upload .image-upload-note {
+    min-width: 100%;
+    text-align: center;
+    color: #aeaeae;
+}
+
+gardino-image-upload .image-upload-note em,
+.gardino-image-upload .image-upload-note em {
+    min-width: 100%;
+    text-align: center;
+    color: #aeaeae;
+    opacity: 0.7;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    height: 35px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+gardino-period-select,
+.gardino-period-select {
+
+}
+
+gardino-period-select .period-select-label,
+.gardino-period-select .period-select-label {
+    min-height: 100%;
+    min-width: 100%;
+    height: 43px;
+    display: table-cell;
+    vertical-align: bottom;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+gardino-period-select .period-select,
+.gardino-period-select .period-select {
+    min-width: 100px;
+}
+
